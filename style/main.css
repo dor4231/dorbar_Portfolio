@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://fonts.googleapis.com/css?family=Montserrat:100,400,700');
+}
+
+
+header {
+    text-align: right;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    border-bottom: 1px solid rgba(0,0,0,0.6);
+    box-shadow: 0 2px 10px black;
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #107abd;
+    color: #212121;
+}
+
+header h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 5em;
+    font-weight: 400;
+    text-shadow: -1px -1px 0 #e1e1e1;
+}
+
+header h2 {
+    font-weight: 100;
+}
+
+header .logo {
+    width: 10vw;
+    order: 0;
+    flex-basis: 30%;
+}
+
+.profile-name {
+    flex-basis: 30%;
+    order: 2;
+}
+
+nav {
+    flex-basis: 40%;
+    order:1;
+    text-align: center;
+    padding: 50px 0;
+}
+nav a {
+    font-size: 1.6em;
+    text-decoration: none;
+    color: #212121;
+    transition: color 0.3s, text 3s;
+    margin: 5%;
+}
+
+nav a:hover {
+    color: #F1F1F1;
+}
+
+.burger-check {
+    display: none;
+}
+
+.collapse {
+    display: none;
+}
+
+
+
+@media (max-width: 499px) {
+    .profile-name {
+        flex-basis: 60%;
+    }
+
+    .logo-box {
+        flex-basis: 40%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .collapse {
+        display: inherit;
+    }
+
+    header {
+
+    }
+
+    header .logo {
+        /*width: 30vw;*/
+        order: 0;
+        flex-basis: 100%;
+
+    }
+
+    .burger {
+        flex-basis:100%;
+        order: 1;
+        position:relative;
+    }
+
+    .burger img {
+        bottom:0;
+
+        position: absolute;
+    }
+
+    nav {
+        position: fixed;
+        width: 170px;
+        background-color: rgba(33,33,33, 0.8);
+        left: -200px;
+        transition: left 1s;
+    }
+
+    nav a {
+        display: block;
+        margin-bottom: 15px;
+        color: antiquewhite;
+    }
+
+    .burger-check:checked ~ nav {
+        left: 0;
+    }
+
+
+}
