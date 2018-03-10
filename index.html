@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no; target-densityDpi=device-dpi" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
 
     <title>Dor Bar | Web Developer and Designer</title>
 
@@ -17,30 +17,43 @@
         </div>
         <input type="checkbox" class="burger-check" id="burger-check">
         <div class="logo-box">
-            <img src="assets/images_src/logo.svg" class="logo" alt="My logo icon."/>
+            <img src="assets/icons/logo.svg" class="logo" alt="My logo icon."/>
             <label for="burger-check" class="burger collapse">
-                <img src="assets/images_src/hamburger-icon.svg" />
+                <img src="assets/icons/hamburger_icon.svg" />
             </label>
         </div>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Gallery</a>
-            <a href="#">About</a>
-            <label for="burger-check" class="burger collapse">
-                <img src="assets/images_src/hamburger-icon.svg" />
+            <div class="headlines">
+                <a href="#">Home</a>
+                <a href="#">Gallery</a>
+                <a href="#">About</a>
+            </div>
+            <label for="burger-check" class="x-icon collapse">
+                <p>✕</p>
             </label>
         </nav>
 
     </header>
     <section class="main-image">
         <picture>
+            <source srcset="assets/images/Do_more-small.jpg" media="screen and (max-width: 499px)">
+            <source srcset="assets/images/Do_more-medium.jpg" media="screen and (min-width: 500px) and (max-width: 1000px)">
+            <source srcset="assets/images/Do_more-large.jpg" media="screen and (min-width: 1001px) and (max-width: 1600px)">
             <img src="assets/images_src/Do_more.jpg" alt="Main image do more."/>
         </picture>
+        <div id="main-information">
+
+        </div>
     </section>
-    <section class="gallery">
-        <img src="assets/images_src/design_simple.jpg" alt="I design and develop experiences that make people's live simple."/>
-        <img src="assets/images_src/Passion.jpg" alt="Passion led us here"/>
-        <img src="assets/images_src/programmers_group.jpg" alt="A large group of programmers in a room."/>
+    <section class="featured">
+        <h2>Featured Work:</h2>
+        <div class="gallery-window">
+            <div class="gallery-scroll">
+                <img src="assets/images_src/design_simple.jpg" alt="I design and develop experiences that make people's live simple."/>
+                <img src="assets/images_src/Passion.jpg" alt="Passion led us here"/>
+                <img src="assets/images_src/programmers_group.jpg" alt="A large group of programmers in a room."/>
+            </div>
+        </div>
     </section>
 </body>
 </html>

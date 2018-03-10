@@ -1,8 +1,26 @@
+/**************
+	General
+***************/
 @font-face {
     font-family: 'Montserrat';
     src: url('https://fonts.googleapis.com/css?family=Montserrat:100,400,700');
 }
 
+/**************
+	General
+***************/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+/**************
+	Header & Navigation
+***************/
 
 header {
     text-align: right;
@@ -49,7 +67,7 @@ nav a {
     font-size: 1.6em;
     text-decoration: none;
     color: #212121;
-    transition: color 0.3s, text 3s;
+    transition: color 0.3s;
     margin: 5%;
 }
 
@@ -65,11 +83,26 @@ nav a:hover {
     display: none;
 }
 
-img {
-    max-width: 100%;
+/*****************
+	Main Image
+******************/
+
+
+
+main-information {
+
 }
 
+/*****************
+	Featured
+******************/
 
+
+
+
+/*****************
+	Responsive Section
+******************/
 
 @media (max-width: 499px) {
     .profile-name {
@@ -86,10 +119,6 @@ img {
         display: inherit;
     }
 
-    header {
-
-    }
-
     header .logo {
         /*width: 30vw;*/
         order: 0;
@@ -104,9 +133,21 @@ img {
     }
 
     .burger img {
-        bottom:0;
-
+        bottom: 0;
         position: absolute;
+        width: 40px;
+        height: 40px;
+    }
+
+    nav .x-icon {
+        width: 85%;
+        margin-bottom: 10px;
+    }
+
+    .x-icon p{
+        text-align: right;
+        width: 100%;
+        color: antiquewhite;
     }
 
     nav {
@@ -115,6 +156,12 @@ img {
         background-color: rgba(33,33,33, 0.8);
         left: -200px;
         transition: left 1s;
+        padding: 0;
+    }
+
+    nav .headlines {
+        margin-top: 50px;
+        margin-bottom: 20px;
     }
 
     nav a {
@@ -125,5 +172,26 @@ img {
 
     .burger-check:checked ~ nav {
         left: 0;
+    }
+
+    .gallery-window {
+        width: 100%;
+        height: 470px;
+        /*border: 1px solid red;*/
+        /*box-sizing: border-box;*/
+        overflow: scroll;
+    }
+
+    .gallery-scroll {
+        width: 100%;
+        height: 470px;
+        display: flex;
+        /*flex-wrap: wrap;*/
+
+
+    }
+
+    .gallery-scroll img {
+        object-fit: cover;
     }
 }

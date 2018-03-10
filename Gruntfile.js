@@ -10,18 +10,21 @@ module.exports = function(grunt) {
                 newFilesOnly: true,
                 sizes: [
                 {
-                    width: 400,
-                    suffix: "small",
+                    width: 500,
+                    rename: false,
+                    suffix: "-small",
                     quality: 60
                 },
                 {
                     width: 800,
-                    suffix: "medium",
+                    rename: false,
+                    suffix: "-medium",
                     quality: 60
                 },
                 {
                     width: 1600,
-                    suffix: "large",
+                    rename: false,
+                    suffix: "-large",
                     quality: 60
                 }
               ]
@@ -47,21 +50,17 @@ module.exports = function(grunt) {
           }
       },
       copy: {
-          dev: {
-              files: [{
-                  expend: true,
-                  cwd: 'assets/images_src/fixed/',
-                  src: ['*'],
-                  dest: 'assets/images/',
-                  flatten: true
-              }]
+          options: {},
+          files: {
+              'assets/images/': ['assets/icons/*']
           }
       }
   });
 
   grunt.loadNpmTasks('grunt-responsive-images');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-copy');
+  // grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-copy');
   grunt.loadNpmTasks('grunt-mkdir');
 
   grunt.registerTask('default', ['mkdir', 'responsive_images', 'copy']);
