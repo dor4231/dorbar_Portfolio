@@ -1,10 +1,21 @@
 /**************
-	General
+	Font-Faces
 ***************/
 @font-face {
     font-family: 'Montserrat';
     src: url('https://fonts.googleapis.com/css?family=Montserrat:100,400,700');
 }
+
+@font-face {
+    font-family: 'brandico';
+    src: url(http://weloveiconfonts.com/api/?family=brandico);
+}
+
+/* brandico */
+[class*="brandico-"]:before {
+    font-family: 'brandico', sans-serif;
+}
+
 
 /**************
 	General
@@ -12,6 +23,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: black
 }
 
 img {
@@ -87,24 +99,284 @@ nav a:hover {
 	Main Image
 ******************/
 
+.main-image {
+    position: relative;
+}
 
+.main-image img {
 
-main-information {
+}
 
+.main-information {
+    padding: 5% 10%;
+    width: calc(100% - 20%);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.0) 0%, black 80%);
+    color: antiquewhite;
+    position: absolute;
+    bottom: 0
+}
+
+.main-information h3 {
+    margin: 5px 0;
+    font-weight: 400;
+    font-size: 1.3em;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.main-information p {
+    margin: 0;
+    font-weight: 100;
+    letter-spacing: 4px;
 }
 
 /*****************
 	Featured
 ******************/
+.featured {
+    margin-top: 40px;
+    position: relative;
+}
 
+.featured .top-gradiant {
+    background-image: linear-gradient(to top, rgba(0,0,0,0.0), black 60%);
+    width: 100%;
+    position: absolute;
+    top: -40px;
+    height: 100px;
+}
 
+.featured h2 {
+    color: white;
+    font-weight: 100;
+    margin: 0;
+    text-shadow: 0 0 10px white;
+    text-align: center;
+    letter-spacing: 2px;
+}
 
+/*****************
+	Footer - Contact Info
+******************/
+
+footer {
+    width: 100%;
+    height: 30vh;
+    background-color: #212121;
+    color: #616161;
+    display: flex;
+    flex-wrap: wrap;
+    /*padding: 3vh 10px 0 10px;*/
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%
+}
+
+.contact h2 {
+    flex-basis: 100%;
+    text-align: center;
+    margin: 3vh 0 1.5vh 0;
+}
+
+.contact .cell {
+    flex-basis: 100%;
+    display: flex;
+}
+
+.cell span {
+    flex-basis: 30%;
+    font-size: 1em;
+    margin-left: 5%;
+}
+
+.contact a {
+    flex-basis: 70%;
+    text-decoration: none;
+    text-align: left;
+    color: #e1e1e1;
+    font-size: 1em;
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.social a {
+    flex-basis: 17%;
+    margin: 20px 5%;
+}
 
 /*****************
 	Responsive Section
 ******************/
 
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    header {
+        height: 119px;
+    }
+
+    .main-information h3 {
+        margin: 8px 0;
+        font-weight: 400;
+        font-size: 1.7em;
+
+    }
+
+    .main-information p {
+        margin: 0;
+        font-weight: 100;
+        font-size: 1.3em;
+    }
+
+    .collapse {
+        display: inherit;
+    }
+
+    .profile-name {
+        flex-basis: 80%;
+    }
+
+    nav {
+        position: fixed;
+        width: 100%;
+        background-color: rgba(33,33,33, 0.8);
+        top: -200px;
+        left: 0;
+        transition: top 1s;
+        padding: 0;
+        z-index: 1;
+    }
+
+    nav .headlines {
+        width: 100%;
+        display: flex;
+    }
+
+    nav a {
+        flex-basis: 33%;
+        margin-bottom: 15px;
+        color: antiquewhite;
+    }
+
+    .burger-check:checked ~ nav {
+        top: 0;
+    }
+
+    nav .x-icon {
+        margin-bottom: 10px;
+        margin-left: 60%;
+    }
+
+    .x-icon span {
+        text-align: right;
+        color: antiquewhite;
+        font-size: 1.3em;
+        transition: font-size 0.5s;
+    }
+
+    .burger {
+        flex-basis:100%;
+        order: 0;
+        /*background-color: white;*/
+    }
+
+    .burger img {
+        width: 40px;
+        height: 40px;
+        margin-top: 30px;
+        margin-right: 19px;
+    }
+
+    .featured h2 {
+        color: antiquewhite;
+        font-weight: 100;
+        margin-left: 10px;
+        font-size: 3em;
+    }
+
+    .gallery-control {
+        position: relative;
+    }
+
+    .gallery-window {
+        width: 100%;
+        height: 90vh;
+        /*border: 1px solid red;*/
+        /*box-sizing: border-box;*/
+        overflow: scroll;
+    }
+
+    .gallery-control .arrow {
+        position: absolute;
+        font-size: 3em;
+        top: 40%;
+        color: antiquewhite;
+        text-shadow: 2px 3px 6px #212121;
+    }
+
+    .gallery-control .arrow.right {
+        right: 30px;
+    }
+
+    .gallery-control .arrow.left {
+        left: 30px;
+    }
+
+    .gallery-scroll {
+        width: 100%;
+        height: 90vh;
+        display: flex;
+
+    }
+
+    .gallery-scroll img,  .gallery-scroll picture img {
+        object-fit: cover;
+        flex-basis: 33.3%;
+    }
+
+    .contact {
+        flex-basis: 50%;
+
+    }
+
+    .contact h2 {
+
+    }
+
+    .contact .cell {
+
+    }
+
+    .cell span {
+
+    }
+
+    .contact a {
+
+    }
+
+    .social {
+        flex-basis: 40%;
+    }
+
+    .social a {
+    }
+
+}
+
+
+
 @media (max-width: 499px) {
+    .collapse {
+        display: inherit;
+    }
+
     .profile-name {
         flex-basis: 60%;
     }
@@ -115,15 +387,11 @@ main-information {
         flex-wrap: wrap;
     }
 
-    .collapse {
-        display: inherit;
-    }
 
     header .logo {
         /*width: 30vw;*/
         order: 0;
         flex-basis: 100%;
-
     }
 
     .burger {
@@ -140,14 +408,21 @@ main-information {
     }
 
     nav .x-icon {
-        width: 85%;
+        /*width: 100%;*/
         margin-bottom: 10px;
+        margin-left: 60%;
     }
 
-    .x-icon p{
+    .x-icon span {
         text-align: right;
-        width: 100%;
+        /*width: 100%;*/
         color: antiquewhite;
+        font-size: 1.3em;
+        transition: font-size 0.5s;
+    }
+
+    .x-icon span:hover {
+        font-size: 1.4em;
     }
 
     nav {
@@ -157,6 +432,7 @@ main-information {
         left: -200px;
         transition: left 1s;
         padding: 0;
+        z-index: 1;
     }
 
     nav .headlines {
@@ -174,24 +450,92 @@ main-information {
         left: 0;
     }
 
+
+    .featured h2 {
+        color: antiquewhite;
+        font-weight: 100;
+        margin-top: 30px;
+
+    }
+
+    .gallery-control {
+        position: relative;
+    }
+
     .gallery-window {
         width: 100%;
         height: 470px;
-        /*border: 1px solid red;*/
-        /*box-sizing: border-box;*/
         overflow: scroll;
+    }
+
+    .gallery-control .arrow {
+        position: absolute;
+        font-size: 3em;
+        top: 40%;
+        color: antiquewhite;
+        text-shadow: 2px 3px 6px #212121;
+    }
+
+    .gallery-control .arrow.right {
+        right: 30px;
+    }
+
+    .gallery-control .arrow.left {
+        left: 30px;
     }
 
     .gallery-scroll {
         width: 100%;
         height: 470px;
         display: flex;
-        /*flex-wrap: wrap;*/
-
 
     }
 
-    .gallery-scroll img {
+    .gallery-scroll img,  .gallery-scroll picture img {
         object-fit: cover;
+        flex-basis: 33.3%;
+    }
+
+    .contact {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%
+    }
+
+    .contact h2 {
+        flex-basis: 100%;
+        text-align: center;
+        margin: 3vh 0 1.5vh 0;
+    }
+
+    .contact .cell {
+        flex-basis: 100%;
+        display: flex;
+    }
+
+    .cell span {
+        flex-basis: 30%;
+        font-size: 1em;
+        margin-left: 5%;
+    }
+
+    .contact a {
+        flex-basis: 70%;
+        text-decoration: none;
+        text-align: left;
+        color: #e1e1e1;
+        font-size: 1em;
+    }
+
+    .social {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .social a {
+        flex-basis: 17%;
+        margin: 20px 5%;
     }
 }
