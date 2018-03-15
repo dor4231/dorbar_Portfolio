@@ -42,7 +42,7 @@ header {
     box-shadow: 0 2px 10px black;
     padding: 0 20px 30px 20px;
     display: flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     background-color: #107abd;
     color: #212121;
 }
@@ -61,16 +61,23 @@ header h2 {
 header .logo {
     width: 10vw;
     order: 0;
-    flex-basis: 30%;
+    flex-basis: 100%;
+}
+
+.logo-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 10%;
+    align-items: center;
 }
 
 .profile-name {
-    flex-basis: 30%;
+    flex-basis: 35%;
     order: 2;
 }
 
 nav {
-    flex-basis: 40%;
+    flex-basis: 55%;
     order:1;
     text-align: center;
     padding: 50px 0;
@@ -101,6 +108,8 @@ nav a:hover {
 
 .main-image {
     position: relative;
+    max-height: 700px;
+    overflow: hidden;
 }
 
 .main-image img {
@@ -138,7 +147,7 @@ nav a:hover {
     position: relative;
 }
 
-.featured .top-gradiant {
+.featured .top-gradient {
     background-image: linear-gradient(to top, rgba(0,0,0,0.0), black 60%);
     width: 100%;
     position: absolute;
@@ -171,7 +180,7 @@ footer {
     background-color: #212121;
     color: #616161;
     display: flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     /*padding: 3vh 10px 0 10px;*/
 }
 
@@ -206,14 +215,14 @@ footer {
     font-size: 1em;
 }
 
-.social {
+.social ul {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     margin: 0 auto;
 }
 
-.social a {
+.social li {
     flex-basis: 17%;
     margin: 20px 5%;
 }
@@ -222,7 +231,7 @@ footer {
 	Responsive Section
 ******************/
 
-@media screen and (min-width: 500px) and (max-width: 800px) {
+@media screen and (min-width: 500px) and (max-width: 850px) {
     header {
         height: 119px;
         padding-top: 10px;
@@ -296,7 +305,7 @@ footer {
     .burger img {
         width: 40px;
         height: 40px;
-        margin-top: 30px;
+        margin-top: 10px;
         margin-right: 19px;
     }
 
@@ -361,15 +370,20 @@ footer {
         position: absolute;
         bottom: 0;
         text-align: center;
-        padding-bottom: 30px;
+        padding-bottom: 40px;
     }
 
     .img_captions h3 {
+        font-size: 1.7em;
         margin: 10px 0;
     }
 
+    .img_captions p {
+        margin: 0;
+    }
+
     .img_captions a {
-        margin: 0 0 10px 0;
+        margin: 0;
         text-decoration: none;
         color: #d4d4d4;
     }
@@ -403,13 +417,14 @@ footer {
 
     }
 
-    .social {
+    .social ul {
         flex-basis: 40%;
-        align-content: center;
+        /*align-content: center;*/
     }
 
-    .social a {
+    .social li {
         padding-top: 10%;
+        display: inline-block;
     }
 
 }
@@ -538,14 +553,10 @@ footer {
     }
 
     .gallery-scroll .figure {
-        /*object-fit: cover;*/
-        /*width:100%;*/
         height: 100%;
         flex-basis: 100%;
         position: relative;
         z-index: 0;
-        /*background-color: blue;*/
-        /*border: 1px solid red;*/
     }
 
     .figure img {
@@ -570,13 +581,19 @@ footer {
         margin: 10px 0;
     }
 
-    .img_captions p {
+    .img_captions a {
         margin: 0;
+        text-decoration: none;
+        color: #d4d4d4;
     }
 
     /*
         Footer
     */
+    footer {
+        flex-wrap: wrap;
+    }
+
     .contact {
         display: flex;
         flex-wrap: wrap;
@@ -608,15 +625,16 @@ footer {
         font-size: 1em;
     }
 
-    .social {
+    .social ul {
         display: flex;
         flex-wrap: wrap;
         width: 80%;
         margin: 0 auto;
     }
 
-    .social a {
+    .social li {
         flex-basis: 17%;
         margin: 20px 7%;
+        display: inline-block;
     }
 }
