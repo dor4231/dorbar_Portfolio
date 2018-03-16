@@ -24,6 +24,8 @@
     "grunt-autoprefixer": "^3.0.4",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-uglify": "^3.3.0",
     "grunt-copy": "^0.1.0",
     "grunt-mkdir": "^1.0.0",
     "grunt-responsive-images": "^1.10.1"
