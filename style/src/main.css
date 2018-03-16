@@ -42,7 +42,6 @@ header {
     padding: 0 20px 30px 20px;
     display: -ms-flexbox;
     display: flex;
-    /*flex-wrap: wrap;*/
     background-color: #107abd;
     color: #212121;
 }
@@ -124,10 +123,6 @@ nav a:hover {
     position: relative;
     max-height: 800px;
     overflow: hidden;
-}
-
-.main-image img {
-
 }
 
 .main-information {
@@ -279,8 +274,6 @@ footer {
     color: #616161;
     display: -ms-flexbox;
     display: flex;
-    /*flex-wrap: wrap;*/
-    /*padding: 3vh 10px 0 10px;*/
 }
 
 .contact {
@@ -353,6 +346,9 @@ footer {
 ******************/
 
 @media screen and (min-width: 500px) and (max-width: 850px) {
+    /*
+        Header
+    */
     header {
         height: 119px;
         padding-top: 10px;
@@ -429,7 +425,6 @@ footer {
         flex-basis: 100%;
         -ms-flex-order: 0;
         order: 0;
-        /*background-color: white;*/
     }
 
     .burger img {
@@ -438,6 +433,10 @@ footer {
         margin-top: 10px;
         margin-right: 19px;
     }
+
+    /*
+        Featured
+    */
 
     .featured h2 {
         color: antiquewhite;
@@ -530,23 +529,6 @@ footer {
     .contact {
         -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-
-    }
-
-    .contact h2 {
-
-    }
-
-    .contact .cell {
-
-    }
-
-    .cell span {
-
-    }
-
-    .contact a {
-
     }
 
     .social ul {
@@ -566,6 +548,9 @@ footer {
 }
 
 @media (max-width: 499px) {
+    /*
+        Header
+    */
     header h1 {
         font-size: 4em
     }
@@ -613,14 +598,12 @@ footer {
     }
 
     nav .x-icon {
-        /*width: 100%;*/
         margin-bottom: 10px;
         margin-left: 60%;
     }
 
     .x-icon span {
         text-align: right;
-        /*width: 100%;*/
         color: antiquewhite;
         font-size: 1.3em;
         transition: font-size 0.5s;
