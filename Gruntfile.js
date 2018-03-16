@@ -54,6 +54,22 @@ module.exports = function(grunt) {
           files: {
               'assets/images/': ['assets/icons/*']
           }
+      },
+      autoprefixer: {
+          options: {
+                browsers: [
+                    "> 1%",
+                    "last 3 ie versions",
+                    "last 3 chrome versions",
+                    "last 3 safari versions",
+                    "last 3 iOS versions",
+                    'ff > 3.4'
+                ]
+          },
+          your_target: {
+              src: "style/src/main_min.css",
+              dest: "style/main_min.css"
+          },
       }
   });
 
@@ -62,6 +78,7 @@ module.exports = function(grunt) {
   // grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-copy');
   grunt.loadNpmTasks('grunt-mkdir');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   grunt.registerTask('default', ['mkdir', 'responsive_images', 'copy']);
 };

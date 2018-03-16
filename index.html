@@ -2,95 +2,99 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi">
 
     <title>Dor Bar | Web Developer and Designer</title>
 
-    <link rel="stylesheet" href="style/normalize.css">
-    <link rel="stylesheet" type="text/css" href="style/main.css" />
+    <link rel="stylesheet" href="style/normalize_min.css">
+    <link rel="stylesheet" type="text/css" href="style/main_min.css"/>
 </head>
 <body>
-    <header>
-        <div class="profile-name">
-            <h1>Dor Bar</h1>
-            <h2>Web Developer & Designer</h2>
+<header>
+    <div class="profile-name">
+        <h1>Dor Bar</h1>
+        <h2>Web Developer & Designer</h2>
+    </div>
+    <input type="checkbox" class="burger-check" id="burger-check">
+    <div class="logo-box">
+        <img src="assets/icons/logo.svg" class="logo" alt="My logo icon."/>
+        <label for="burger-check" class="burger collapse">
+            <img src="assets/icons/hamburger_icon.svg" alt="Humburger icon to open the navigation bar.">
+        </label>
+    </div>
+    <nav>
+        <div class="headlines">
+            <a href="#">Home</a>
+            <a href="#">Gallery</a>
+            <a href="#">About</a>
         </div>
-        <input type="checkbox" class="burger-check" id="burger-check">
-        <div class="logo-box">
-            <img src="assets/icons/logo.svg" class="logo" alt="My logo icon."/>
-            <label for="burger-check" class="burger collapse">
-                <img src="assets/icons/hamburger_icon.svg" />
-            </label>
-        </div>
-        <nav>
-            <div class="headlines">
-                <a href="#">Home</a>
-                <a href="#">Gallery</a>
-                <a href="#">About</a>
-            </div>
-            <label for="burger-check" class="x-icon collapse">
-                <span>✕</span>
-            </label>
-        </nav>
+        <label for="burger-check" class="x-icon collapse">
+            <span>✕</span>
+        </label>
+    </nav>
 
-    </header>
-    <section class="main-image">
-        <picture>
-            <source srcset="assets/images/Do_more-small.jpg" media="screen and (max-width: 499px)">
-            <source srcset="assets/images/Do_more-medium.jpg" media="screen and (min-width: 500px) and (max-width: 1000px)">
-            <source srcset="assets/images/Do_more-large.jpg" media="screen and (min-width: 1001px) and (max-width: 1600px)">
-            <img src="assets/images_src/Do_more.jpg" alt="Main image do more."/>
-        </picture>
-        <div class="main-information">
-            <h3>Creation is My Nature</h3>
-            <p>My goal is to build the best UI and UX that just... DO MORE.</p>
-        </div>
-    </section>
-    <section class="featured">
+</header>
+<section class="main-image">
+    <picture>
+        <source srcset="assets/images/Do_more-small.jpg" media="screen and (max-width: 499px)">
+        <source srcset="assets/images/Do_more-medium.jpg" media="screen and (min-width: 500px) and (max-width: 1000px)">
+        <source srcset="assets/images/Do_more-large.jpg" media="screen and (min-width: 1001px) and (max-width: 1600px)">
+        <img src="assets/images_src/Do_more.jpg" alt="Main image do more."/>
+    </picture>
+    <div class="main-information">
+        <h3>Creation is My Nature</h3>
+        <p>My goal is to build the best UI and UX that just... DO MORE.</p>
+    </div>
+</section>
+<section class="featured">
 
-        <div class="gallery-control">
-            <div class="top-gradient">
-                <h2>Featured Work</h2>
-            </div>
-            <div class="arrow right">
-                <span> > </span>
-            </div>
-            <div class="arrow left">
-                <span> < </span>
-            </div>
-            <div class="gallery-window">
-                <div class="gallery-scroll">
-                    <div class="figure">
-                        <img src="assets/images/design_simple-large.jpg" alt="I design and develop experiences that make people's live simple.">
-                        <div class="img_captions">
-                            <h3>Scroll right to see my work...</h3>
-                            <p></p>
-                        </div>
+    <div class="gallery-control">
+        <div class="top-gradient">
+            <h2>Featured Work</h2>
+        </div>
+        <div class="arrow right">
+            <span> > </span>
+        </div>
+        <div class="arrow left">
+            <span> &lt; </span>
+        </div>
+        <div class="gallery-window">
+            <div class="gallery-scroll">
+                <div class="figure">
+                    <img src="assets/images/design_simple-large.jpg"
+                         alt="I design and develop experiences that make people's live simple.">
+                    <div class="img_captions">
+                        <h3>Scroll right to see my work...</h3>
+                        <p></p>
                     </div>
-                    <div class="figure">
-                        <div class="img_captions">
-                            <h3>Animal Trading Cards</h3>
-                            <a href="https://github.com/dor4231/Animal_card_project_FEND" target="_blank"><p>https://github.com/dor4231/Animal_card_project_FEND</p></a>
-                        </div>
-                        <img src="assets/images/animal_card-large.png" alt="My animal trading cards project.">
+                </div>
+                <div class="figure">
+                    <div class="img_captions">
+                        <h3>Animal Trading Cards</h3>
+                        <a href="https://github.com/dor4231/Animal_card_project_FEND" target="_blank"><p>
+                            https://github.com/dor4231/Animal_card_project_FEND</p></a>
                     </div>
-                    <div class="figure">
-                        <img src="assets/images/Pomodoro-large.png" alt="My pomodoro project.">
-                        <div class="img_captions">
-                            <h3>Pomodoro</h3>
-                            <a href="https://github.com/dor4231/Pomodoro" target="_blank"><p>https://github.com/dor4231/Pomodoro</p></a>
-                        </div>
+                    <img src="assets/images/animal_card-large.png" alt="My animal trading cards project.">
+                </div>
+                <div class="figure">
+                    <img src="assets/images/Pomodoro-large.png" alt="My pomodoro project.">
+                    <div class="img_captions">
+                        <h3>Pomodoro</h3>
+                        <a href="https://github.com/dor4231/Pomodoro" target="_blank"><p>
+                            https://github.com/dor4231/Pomodoro</p></a>
                     </div>
-                    <div class="figure">
-                        <img src="assets/images/Passion-large.jpg" alt="Passion led us here.">
-                        <div class="img_captions">
-                            <h3>Everything I do, I do with passion...</h3>
-                        </div>
+                </div>
+                <div class="figure">
+                    <img src="assets/images/Passion-large.jpg" alt="Passion led us here.">
+                    <div class="img_captions">
+                        <h3>Everything I do, I do with passion...</h3>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 <footer>
     <div class="contact">
         <h2>Contact Me</h2>
@@ -104,13 +108,16 @@
     <div class="social">
         <ul>
             <li>
-                <a target="_blank" href="https://www.linkedin.com/in/dor-bar-1491a878/"><img src="assets/icons/LinkedIn.svg" alt="LinkedIn"></a>
+                <a target="_blank" href="https://www.linkedin.com/in/dor-bar-1491a878/"><img
+                        src="assets/icons/LinkedIn.svg" alt="LinkedIn"></a>
             </li>
             <li>
-                <a target="_blank" href="https://github.com/dor4231"><img src="assets/icons/GitHub.svg" alt="GitHub"></a>
+                <a target="_blank" href="https://github.com/dor4231"><img src="assets/icons/GitHub.svg"
+                                                                          alt="GitHub"></a>
             </li>
             <li>
-                <a target="_blank" href="https://www.facebook.com/dor4231" ><img src="assets/icons/Facebook.svg" alt="Facebook"></a>
+                <a target="_blank" href="https://www.facebook.com/dor4231"><img src="assets/icons/Facebook.svg"
+                                                                                alt="Facebook"></a>
             </li>
         </ul>
     </div>
